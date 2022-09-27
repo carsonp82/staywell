@@ -1,0 +1,28 @@
+.nav{
+  position: fixed;
+  width:100%;
+  background-color: none;
+  padding-top: 5px;
+}
+
+body{
+  background-color:#559065;
+}
+
+/* Change the link color to #111 (black) on hover */
+a:hover {
+  color: #6a6b3a;
+}
+.nav-item.nav-link{
+  color: #4e5a65;
+  font-weight: bold;
+}
+
+.nav-item.nav-link.active{
+  color: #6b6c23;
+  font-weight: bold;
+}
+
+.nav-item.nav-link:hover{
+  color: #6b6c23;
+}
