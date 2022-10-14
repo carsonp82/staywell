@@ -1,0 +1,303 @@
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  .sidenav p {
+    position: relative;
+    color: #2196F3;
+    text-align: left;
+    font-size: 23px;
+    bottom: -65%;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .Avatar {
+    color:rgba(213, 220, 4, 0.63);
+    border-radius: 50%;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    background-color: #cbcaca;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .TextBox p{
+    /*layout*/
+    position: relative;
+    max-width: 100em;
+    
+    /* looks */
+    background-color: #fff;
+    padding: 1.1em 1.3em;
+    font-size: 1em;
+    border-radius: 1rem;
+    box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+  }
+
+  .TextBox p::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 1.5em; /* offset should move with padding of parent */
+    border: .75rem solid transparent;
+    border-top: none;
+
+    border-bottom-color: #fff;
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+  }
+
+  .TextBox p:hover {
+    transform: scale(1.08); 
+  }
+  
+  html {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #192229;
+    background: linear-gradient(135deg, #F4F2F3, #BFC6D0);
+  }
+  
+  html, body {
+    height: 100%;
+    display:flex;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  text-align:center;
+  bottom: -65%;
+  left: 10%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  text-align:center;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-align:center;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-align:center;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.container {
+  position: relative;
+	justify-content: center;
+	flex-direction: column;
+	color: rgb(255, 255, 255);
+}
+
+.lead { font-family: 'Quicksand'; }
+
+.header-bar {
+  position: relative;
+  width: 500px;
+  height: 120px;
+  background-color: rgba(56, 184, 177, 0.545);
+  float: right;
+  margin: 0 15px;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 1.5%;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(5, 61, 69);
+  transform: 0.5s;
+}
+
+.header-bar:hover .icon{
+  width: 70px;
+  height: 70px;
+  top: 10px;
+  left: calc(90% - 40px);
+  border-radius: 50%;
+}
+
+.fa-solid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+}
+
+.header-bar:hover .icon .fa-solid {
+  font-size: 30px;
+}
+
+.row h2 {
+  font-family: 'times new roman';
+  font-weight: 400;
+  color: #307d82;
+  font-size: 30px;
+  top: 35%;
+  left: 45%;
+  text-align: center;
+  position: absolute;
+}
+
+.row h2:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  top: 40px;
+  background: #173433;
+  height: 1px;
+}
+
+.col-3{
+  float: left; 
+  width: 27.33%; 
+  margin: 70px 3%; 
+  position: relative;
+}
+
+.Summarize {
+  border: 0; 
+  padding: 5px 0 7px; 
+  border: 1px solid transparent; 
+  border-bottom-color: rgb(117, 115, 115); 
+  transition: 0.4s;
+  background-color:rgb(234, 233, 233);
+}
+
+.Summarize:focus {
+  padding: 5px 14px 7px;
+  transform: 0.4s;
+}
+
+.Summarize ~ .focus-border{
+  position: absolute; 
+  height: 0; bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  transition: 0.4s; 
+  z-index: -1;
+}
+
+.Notes {
+  bottom: 50%;
+  flex-direction: column;
+  padding: 2em 3em;
+  flex-grow: 1;
+}
+
+.notes_body {
+  height: 500px;
+  border: none;
+  outline: none;
+  width: 100%;
+  /*background-color: #cbcaca;*/
+  opacity: 50%;
+  flex-grow: 1;
+  font-size: 1.2em;
+  line-height: 1.5;
+  resize: none;
+}
+
+
+
+
+
+
+
+
